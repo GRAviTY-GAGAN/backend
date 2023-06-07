@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
-const connection = mongoose.connect(
-  `mongodb+srv://gagan:gagan@cluster0.jwtqx79.mongodb.net/notesApp`
-);
+const connection = mongoose.connect(process.env.mongooseURL);
 
 module.exports = { connection };

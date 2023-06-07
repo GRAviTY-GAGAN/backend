@@ -3,7 +3,9 @@ const { connection } = require("./db");
 const { userRouter } = require("./Routes/user.routes");
 const { notesRouter } = require("./Routes/note.routes");
 const cors = require("cors");
-const PORT = 8080;
+require("dotenv").config();
+
+const PORT = process.env.port;
 
 const app = express();
 
